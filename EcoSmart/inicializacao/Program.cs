@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Authentication.Google;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
-builder.Services.AddControllers(); // 添加控制器
-builder.Services.AddEndpointsApiExplorer(); // 启用终端点探索
+builder.Services.AddControllers(); // 添加控制器支持
+builder.Services.AddEndpointsApiExplorer(); // 启用终端点 API 探索
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -34,6 +34,7 @@ builder.Services.AddAuthentication(options =>
     options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
 }).AddGoogle(options =>
 {
+    // 确保 appsettings.json 中包含正确的 Google 客户端 ID 和密钥
     options.ClientId = builder.Configuration["Authentication:Google:ClientId"];
     options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
 });
@@ -44,14 +45,15 @@ var app = builder.Build();
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
+    // 启用 Swagger 文档和 UI 在开发环境中
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "EcoSmart API v1"));
 }
 
-app.UseHttpsRedirection();
-app.UseAuthentication(); // 添加身份验证中间件
-app.UseAuthorization();
+app.UseHttpsRedirection(); // 强制使用 HTTPS
+app.UseAuthentication(); // 启用身份验证中间件
+app.UseAuthorization(); // 启用授权中间件
 
-app.MapControllers();
+app.MapControllers(); // 映射控制器路由
 
-app.Run();
+app.Run(); // 运行应用程序

@@ -1,0 +1,8 @@
+C:\Users\nimap\OneDrive\附件\2\GSEcoSmart\EcoSmart\obj\Debug\net8.0\EcoSmart.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nimap\OneDrive\附件\2\GSEcoSmart\EcoSmart\obj\Debug\net8.0\EcoSmart.AssemblyInfoInputs.cache
+C:\Users\nimap\OneDrive\附件\2\GSEcoSmart\EcoSmart\obj\Debug\net8.0\EcoSmart.AssemblyInfo.cs
+C:\Users\nimap\OneDrive\附件\2\GSEcoSmart\EcoSmart\obj\Debug\net8.0\EcoSmart.csproj.CoreCompileInputs.cache
+C:\Users\nimap\OneDrive\附件\2\GSEcoSmart\EcoSmart\obj\Debug\net8.0\EcoSmart.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\nimap\OneDrive\附件\2\GSEcoSmart\EcoSmart\obj\Debug\net8.0\EcoSmart.RazorAssemblyInfo.cache
+C:\Users\nimap\OneDrive\附件\2\GSEcoSmart\EcoSmart\obj\Debug\net8.0\EcoSmart.RazorAssemblyInfo.cs
+C:\Users\nimap\OneDrive\附件\2\GSEcoSmart\EcoSmart\obj\Debug\net8.0\EcoSmart.sourcelink.json
