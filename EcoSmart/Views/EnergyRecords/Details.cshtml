@@ -1,0 +1,25 @@
+@model EcoSmart.Model.EnergyRecord
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Energy Record Details</h1>
+
+<div>
+    <h4>EnergyRecord</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Id</dt>
+        <dd class="col-sm-10">@Model.Id</dd>
+        <dt class="col-sm-2">Device Id</dt>
+        <dd class="col-sm-10">@Model.DeviceId</dd>
+        <dt class="col-sm-2">Amount</dt>
+        <dd class="col-sm-10">@Model.Amount</dd>
+        <dt class="col-sm-2">Timestamp</dt>
+        <dd class="col-sm-10">@Model.Timestamp</dd>
+        <dt class="col-sm-2">Type</dt>
+        <dd class="col-sm-10">@Model.Type</dd>
+    </dl>
+</div>
+<a href="/EnergyRecords" class="btn btn-secondary">Back to List</a>

@@ -1,0 +1,41 @@
+@model IEnumerable<EcoSmart.Model.EnergyRecord>
+
+@{
+    ViewData["Title"] = "Energy Records";
+}
+
+<h1>Energy Records</h1>
+
+<p>
+    <a href="/EnergyRecords/Create" class="btn btn-primary">Add New Record</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>DeviceId</th>
+            <th>Amount</th>
+            <th>Timestamp</th>
+            <th>Type</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model)
+        {
+            <tr>
+                <td>@record.Id</td>
+                <td>@record.DeviceId</td>
+                <td>@record.Amount</td>
+                <td>@record.Timestamp</td>
+                <td>@record.Type</td>
+                <td>
+                    <a href="/EnergyRecords/Details/@record.Id" class="btn btn-info btn-sm">Details</a>
+                    <a href="/EnergyRecords/Edit/@record.Id" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="/EnergyRecords/Delete/@record.Id" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

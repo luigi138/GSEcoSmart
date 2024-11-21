@@ -1,0 +1,32 @@
+@model EcoSmart.Model.EnergyRecord
+
+@{
+    ViewData["Title"] = "Edit Energy Record";
+}
+
+<h1>Edit Energy Record</h1>
+
+<form method="post" asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label>Device Id</label>
+        <input asp-for="DeviceId" class="form-control" />
+        <span asp-validation-for="DeviceId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Amount</label>
+        <input asp-for="Amount" class="form-control" />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Timestamp</label>
+        <input asp-for="Timestamp" class="form-control" />
+        <span asp-validation-for="Timestamp" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Type</label>
+        <input asp-for="Type" class="form-control" />
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Save</button>
+</form>
